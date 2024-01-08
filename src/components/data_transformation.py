@@ -29,7 +29,8 @@ class DataTransformationconfig:
 class DataTransformation:
     def __init__(self):
         self.data_transformation_config=DataTransformationconfig()
-
+   
+    #feturae Enggeneearing 
     def get_data_transformation_object(self):
          
          try:
@@ -38,6 +39,7 @@ class DataTransformation:
             categorical_cols = ['cut', 'color','clarity']
             numerical_cols = ['carat', 'depth','table', 'x', 'y', 'z']
             
+            # Define the custom ranking for each ordinal variable
             # Define the custom ranking for each ordinal variable
             cut_categories = ['Fair', 'Good', 'Very Good','Premium','Ideal']
             color_categories = ['D', 'E', 'F', 'G', 'H', 'I', 'J']
@@ -132,7 +134,7 @@ class DataTransformation:
             )
         
         except Exception as e:
-            logging.info("Exception occured in the initiate_datatransformation")
+            logging.info("Exception occured in the initiate_data_transformation")
 
             raise CustomException(e,sys)
 
